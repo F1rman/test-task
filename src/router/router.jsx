@@ -12,11 +12,11 @@ const routes = [
                 element: <HomePage />
             },
             {
-                path: 'feature', element: <div>sdcs</div>
+                path: 'feature', element: <div>feature</div>
             }, {
-                path: 'blog', element: <div>sdcs</div>
+                path: 'blog', element: <div>blog</div>
             }, {
-                path: 'testimonials', element: <div>sdcs</div>
+                path: 'testimonials', element: <div>testimonials</div>
             },
             {
                 path: 'posts', element: <PostLayout />, children: [
