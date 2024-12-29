@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import { postService } from "./services/api.service";
+import { RouterProvider } from "react-router-dom";
+import router from "./router/router";
+import { AuthProvider } from "hooks/useAuth";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
+    </>
   );
 }
 

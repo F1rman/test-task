@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+$secondary_color: #202020;
+$disabled_color: #a6a6a6;
+$disabled_text_color: #51505050;
+$primary_color: #1d4354;
+$primary_text_color: #222;
+$secondary_text_color: #484848;
+$footer_color: #0f2630;
+
+$error_color: #f3756c;
+$transition: all 0.3s ease;
+$box_shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+
+.container {
+  max-width: 1350px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.input_wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  margin: 0 0 20px;
+
+  .label {
+    color: $secondary_color;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    width: 100%;
+    line-height: 16.94px;
+    text-align: left;
+
+  }
+
+  .outline_input {
+    height: 48px;
+    padding-left: 16px;
+    padding-right: 20px;
+    padding-bottom: 16px;
+    padding-top: 15px;
+    border-radius: 4px;
+    border: solid 1px #E8E8E8;
+    background-color: #fff;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $secondary_text_color;
+    outline: none;
+    transition: $transition;
+
+    &:focus {
+      border: 1px solid $primary_color;
+    }
+
+    // &.error {
+    //   border: solid 1px $error_color !important;
+    // }
+
+    &.disabled {
+      background-color: #d1d1d1;
+      cursor: not-allowed;
+    }
+  }
+
+}
+
+button {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  &.disabled {
+    background-color: $disabled_color;
+    cursor: not-allowed;
+  }
+}
+
+
+.posts {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 8px 17px 0px #C2C2C21A;
+  box-shadow: 0px 30px 30px 0px #C2C2C217;
+  box-shadow: 0px 68px 41px 0px #C2C2C20D;
+  box-shadow: 0px 121px 48px 0px #C2C2C203;
+  box-shadow: 0px 189px 53px 0px #C2C2C200;
+  border: 1px solid #D6D6D6;
+  border-radius: 24px;
+
+}
+
+.description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.col_elipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.home {
+  .col_elipsis {
+    -webkit-line-clamp: 2;
+    line-clamp: 3;
+  }
+}
