@@ -1,6 +1,7 @@
 import logo from "common/images/logo.svg";
 import Button from "components/common/buttons/button";
 import Input from "components/common/inputs/input";
+import Item from "components/register/TrialItem";
 import AuthContext from "hooks/useAuth";
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -31,7 +32,7 @@ export default function Register() {
             if (!value) return setError(key);
         }
         localStorage.setItem('user', JSON.stringify(state));
-       
+
         setUserData(state);
         setLogined(true);
         setState({
@@ -103,21 +104,33 @@ export default function Register() {
                     onClick={() => navigate("/login")}
                 >Sign In</span></p>
             </div>
-            <div className="bg-[#000000] flex flex-col w-full max-w-[293px] justify-center items-center rounded-r-[25px]">
-                <div className="flex items-center mb-4">
-                    <h3 className="pr-2 font-bold text-[24px] text-white"
-                        style={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700 }}
-                    >Kodix</h3>
-                    <div className="border-[#1FFF1A] border-[1px] border-solid rounded-[4px] px-[8px] py-[6px]">
-                        <span className="text-[#1FFF1A] font-medium text-[12px] leading-[14.52px]">PRO</span>
+            <div className="bg-[#000000] p-8 flex flex-col justify-between w-full max-w-[293px] items-start rounded-r-[25px]">
+                <div className="flex flex-col">
+                    <h3 className="text-white text-[24px] font-semibold leading-[34px] mb-6">Get Your FREE <br />30-Days Trial Now!</h3>
+                    <div className="flex flex-col gap-5">
+                        <Item
+                            img="dolar.svg"
+                            title="Absolutely FREE"
+                            description="No hidden charges, No credit card required"
+                        />
+                        <Item
+                            img="fast_easy.svg"
+                            title="Fast & Easy"
+                            description="Get access instantly, no downloads required"
+                        />
+                        <Item
+                            img="data.svg"
+                            title="Your Own Data"
+                            description="Enjoy the Free Trial with your company data"
+                        />
+                        <Item
+                            img="ic_stars.svg"
+                            title="Unlimited Features"
+                            description="Access all features of the world's #1 business software!"
+                        />
                     </div>
                 </div>
-                <span className="text-[#484848] text-center leading-6">
-                    Unlimited traffic, strategic<br /> support, and AI-driven upsells
-                </span>
-                <a href="/" className="text-[#1FFF1A] text-[16px] font-medium leading-[19.36px] underline mt-6">
-                    Learn More
-                </a>
+                <p className="font-semibold text-[14px] leading-[16.94px] text-white">Call us at <span className="text-[#1FFF1A]">800 1301 448</span></p>
             </div>
         </div>
     </div>);

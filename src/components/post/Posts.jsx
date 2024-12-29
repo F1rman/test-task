@@ -23,6 +23,7 @@ export default function Posts() {
       <Button
         variant="default"
         onClick={() => setCount((prev) => prev + 5)}
+        className="h-[37px]"
       >
         <span className="text-secondary_color text-[14px] tracking-[-0.05em]">
           Read more
@@ -30,9 +31,9 @@ export default function Posts() {
       </Button>
     </div>
 
-    <div className="flex flex-col overflow-auto max-h-[720px] mt-[38px]">
+    <div className="flex flex-col overflow-auto gap-[44px] max-h-[880px] mt-[38px]">
       {[...posts].slice(0, count).map((post) => (
-        <Link className="flex items-center w-full mb-[44px] gap-5" key={post.id} to={`${post.id}`}>
+        <Link className="flex items-center w-full gap-5" key={post.id} to={`${post.id}`}>
           <div className="bg-[#F5F5F5] rounded-[16px] flex w-full h-[136px]"></div>
           <div className="flex flex-col w-full">
             <span className="uppercase text-[12px] text-secondary_color font-medium tracking-[-0.05em] mb-5 leading-[14.52px]">wednesday 12, march 2024</span>

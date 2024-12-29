@@ -11,7 +11,7 @@ export default function Header() {
     const navigate = useNavigate();
 
     console.log(userData)
-    return (<header className="flex pt-[36px] pb-[26px] border-[1px] border-solid border-[#0000001A] relative">
+    return (<header className="flex pt-[32px] pb-[22px] border-[1px] border-solid border-[#0000001A] relative">
         <Container className="flex items-center justify-between w-full relative">
             <div className="flex items-center justify-start pl-[14px]">
                 <Link
