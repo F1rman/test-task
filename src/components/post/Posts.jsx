@@ -36,9 +36,9 @@ export default function Posts() {
         <Link className="flex items-center w-full gap-5" key={post.id} to={`${post.id}`}>
           <div className="bg-[#F5F5F5] rounded-[16px] flex w-full h-[136px]"></div>
           <div className="flex flex-col w-full">
-            <span className="uppercase text-[12px] text-secondary_color font-medium tracking-[-0.05em] mb-5 leading-[14.52px]">wednesday 12, march 2024</span>
+            <span className="uppercase text-[12px] text-secondary_color opacity-30 font-medium tracking-[-0.05em] mb-5 leading-[14.52px]">wednesday 12, march 2024</span>
             <h6 className="text-secondary_color text-[17px] leading-[20.57px] font-semibold tracking-[-0.05em] col_elipsis">{post.title}</h6>
-            <p className="text-[14px] text-secondary_color tracking-[-0.05em] mt-2 leading-[16.94px] max-w-[227px] description">{post.body}</p>
+            <p className="text-[14px] text-secondary_color tracking-[-0.05em] mt-2 leading-[16.94px] max-w-[227px] description opacity-50">{post.body}</p>
           </div>
         </Link>
       ))}
