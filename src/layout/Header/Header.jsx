@@ -10,7 +10,6 @@ export default function Header() {
     const { userData, setUserData } = useContext(AuthContext);
     const navigate = useNavigate();
 
-    console.log(userData)
     return (<header className="flex pt-[32px] pb-[22px] border-[1px] border-solid border-[#0000001A] relative">
         <Container className="flex items-center justify-between w-full relative">
             <div className="flex items-center justify-start pl-[14px]">
